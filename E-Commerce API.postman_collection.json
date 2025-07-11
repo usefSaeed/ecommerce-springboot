@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "cecc28e5-a2d7-4352-bf4a-6a37fdc5d1af",
+		"name": "E-Commerce API",
+		"description": "Postman collection for testing E-Commerce Spring Boot API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25132581"
+	},
+	"item": [
+		{
+			"name": "AuthController",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"joe\",\n    \"password\": \"newPassword1!\",\n    \"firstName\": \"Youssef\",\n    \"email\": \"youssef.okab@gmail.com\",\n    \"lastName\": \"Okab\",\n    \"phone\": \"+201117070754\"\n}"
+						},
+						"url": {
+							"raw": "https://accomplished-flexibility-production.up.railway.app/auth/register",
+							"protocol": "https",
+							"host": [
+								"accomplished-flexibility-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"joe\",\n    \"password\": \"newPassword1!\"\n}"
+						},
+						"url": {
+							"raw": "https://accomplished-flexibility-production.up.railway.app/auth/login",
+							"protocol": "https",
+							"host": [
+								"accomplished-flexibility-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductController",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://accomplished-flexibility-production.up.railway.app/product",
+							"protocol": "https",
+							"host": [
+								"accomplished-flexibility-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderController",
+			"item": [
+				{
+					"name": "Get User Orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2UiLCJpYXQiOjE3NTIxMDExOTAsImV4cCI6MTc1MjExOTE5MH0.gv--a1NHy4nh2HIzPp4tu6aoPFvPLAU4CNlpOChMjUc"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://accomplished-flexibility-production.up.railway.app/order",
+							"protocol": "https",
+							"host": [
+								"accomplished-flexibility-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2UiLCJpYXQiOjE3NTIxMDExOTAsImV4cCI6MTc1MjExOTE5MH0.gv--a1NHy4nh2HIzPp4tu6aoPFvPLAU4CNlpOChMjUc"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"quantity\": 2,\n        \"product\": {\n            \"code\": \"P001\"\n        }\n    },\n    {\n        \"quantity\": 1,\n        \"product\": {\n            \"code\": \"P002\"\n        }\n    }\n]"
+						},
+						"url": {
+							"raw": "https://accomplished-flexibility-production.up.railway.app/order",
+							"protocol": "https",
+							"host": [
+								"accomplished-flexibility-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
