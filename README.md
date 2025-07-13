@@ -1,5 +1,18 @@
 # ECommerce App By Youssef Okab
 
+## Importent Notes
+- The Backend code is deployed on a railway service as well as the MYSQL database. Can be tested using the frontend or the portman collection.
+- Backend code can only be tested on railway where environment variabled are set.
+- AI Tools has been used in the UI/Frontend of the project only as Frontend Development is not my main expertise. I focused all my time on developing a scalable extensible, and well-designed backend and database.
+
+## How to run frontend
+- Install npm
+- Install Node Version 16
+- Install React Typescript
+- Navigate to poject directory
+- Run `npm install`
+- Run `npm start`
+
 ## Requirements
 
 ### Functional Requirements
